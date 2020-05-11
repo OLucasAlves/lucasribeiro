@@ -17,6 +17,18 @@ body{
   .menu li {
     list-style:none;
   }
+  .contato{
+    text-align:center;
+  }
+  h1 a{
+    color: whitesmoke;
+    text-decoration:none;
+  }
+
+  
+  h1 a:hover{
+    text-decoration:underline;
+  }
   
   a{
     color: teal;
@@ -36,3 +48,19 @@ body{
   .site-subtitle{
     font-style:italic;
   }
+
+  .sobre{
+    margin-left: 300px;
+    width: 50%;  
+    background: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 1rem solid;
+  }
+
+  p{
+      padding: 1rem;
+  }
+
