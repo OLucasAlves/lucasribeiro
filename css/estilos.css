@@ -1,18 +1,55 @@
 /* Aula inicial :D */
+
+/*Reset do CSS*/
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body{
     background-image: url('https://drive.google.com/uc?id=14xEfigvOJxjDhTfIzcQ7qRdX-1vEyyWC');
     background-size: auto 150vh;
     font-family:Arial;
+    font-size: 10px;
+  }
+
+  /*Se a tela tiver pelo menos 400px vai carregar estes estilos*/
+  @media (min-width: 400px) {
+     body{
+       font-size: 14px;
+     } 
+  }
+
+  @media (min-width: 600px) {
+    body{
+      font-size: 18px;
+    } 
+ }
+
+  header{
+    height:100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   
   
   .menu{
     background-color: white;
+    position: fixed;
+    width: 100vw;
+    top: 0;
   }
   
   .menu ul{
     display:flex;
     justify-content: space-around;
+  }
+
+  .menu a{
+    display: block;
+    padding: 10px 20px;
   }
   
   .menu li {
@@ -32,7 +69,7 @@ body{
   }
   
   a{
-    color: teal;
+    color: #273744;
     text-decoration:none;
   }
   
@@ -44,15 +81,22 @@ body{
   .site-title{
     color: whitesmoke;
     text-align:center;
+    font-size: 24px;
+  }
+
+  .site-title{
+    font-size: 4em;
   }
   
   .site-subtitle{
     font-style:italic;
   }
 
-  .sobre{
-    margin-left: 300px;
-    width: 50%;  
+  .img-portfolio{
+    width: 180px;
+    height: 180;
+  }
+  .sobre{ 
     background: white;
     display: flex;
     flex-direction: row;
@@ -60,6 +104,7 @@ body{
     align-items: center;
     background-color: rgba(0,0,0,0.3);
     border-radius: 5px;
+    
   }
 
   p{
@@ -97,6 +142,18 @@ body{
 .container .dash-prefeitura .painel{
     width: 90%;
     height: 100%;
+}
+ /*---------------------*/
+
+  /*Contato*/
+ .contato{ 
+  background: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(244,244,244,1);
+  border-radius: 5px;
 }
  /*---------------------*/
 
