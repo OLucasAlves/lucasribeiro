@@ -1,7 +1,8 @@
 /* Aula inicial :D */
 body{
-    background-image: url('http://www.vanessametonini.com.br/imersaocss/a1/img/fundo.jpg');
+    background-image: url('https://drive.google.com/uc?id=14xEfigvOJxjDhTfIzcQ7qRdX-1vEyyWC');
     background-size: auto 150vh;
+    background-color: rgba(245,243,243,1);
     font-family:Arial;
   }
   
@@ -65,4 +66,38 @@ body{
       padding: 1rem;
       color: whitesmoke;
   }
+
+  /*Portifolio*/
+  .container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container .dash{
+    height: 1900px;
+    width: 100%;
+}
+
+
+.container .dash .painel{
+    width: 100%;
+    height: 100%;
+}
+
+.container .dash-prefeitura{
+    height: 850px;
+    width:90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.container .dash-prefeitura .painel{
+    width: 90%;
+    height: 100%;
+}
+ /*---------------------*/
+
 
