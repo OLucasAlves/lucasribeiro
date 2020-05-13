@@ -11,7 +11,7 @@ body{
     background-image: url('https://drive.google.com/uc?id=14xEfigvOJxjDhTfIzcQ7qRdX-1vEyyWC');
     background-size: auto 150vh;
     font-family:Arial;
-    font-size: 10px;
+    font-family: 'Share Tech Mono', monospace;
   }
 
   /*Se a tela tiver pelo menos 400px vai carregar estes estilos*/
@@ -50,6 +50,7 @@ body{
   .menu a{
     display: block;
     padding: 10px 20px;
+    font-family: 'Roboto', sans-serif;
   }
   
   .menu li {
@@ -86,16 +87,15 @@ body{
 
   .site-title{
     font-size: 4em;
+    font-family: 'Roboto', sans-serif;
   }
   
   .site-subtitle{
     font-style:italic;
+    font-family: 'Share Tech Mono', monospace;
   }
 
-  .img-portfolio{
-    width: 180px;
-    height: 180;
-  }
+  
   .sobre{ 
     background: white;
     display: flex;
@@ -105,11 +105,13 @@ body{
     background-color: rgba(0,0,0,0.3);
     border-radius: 5px;
     
+    
   }
 
   p{
       padding: 1rem;
       color: whitesmoke;
+      font-family: 'Source Code Pro', monospace;
   }
 
   /*Portifolio*/
@@ -143,6 +145,68 @@ body{
     width: 90%;
     height: 100%;
 }
+
+.portifolio{
+  padding: 1.5em;
+}
+
+.portifolio h2{
+  font-family: 'Share Tech Mono', monospace;
+  color: whitesmoke;
+  margin-bottom: 1em;
+  font-size: 2em;
+}
+
+.portifolio .grid{
+  display: grid;
+  gap: 2em;
+  
+}
+
+@media (min-width: 560px){
+  .portifolio .grid{
+    grid-template-columns: 240px 240px;
+  }
+  
+}
+
+@media (min-width: 880px){
+  .portifolio .grid{
+    grid-template-columns: repeat(3,240px);
+    align-items: center;
+    justify-content: center;
+    height: calc(100vh - 8em - 48px);
+  }
+  
+}
+
+.portifolio figure{
+  text-align: center;
+}
+
+.img-portfolio{
+  width: 240px;
+  height: 180px;
+  object-fit: cover;
+  object-position: left;
+  border-radius: 10px;
+}
+
+.img-portfolio:hover{
+  width: 260px;
+  height: 190px;
+  object-fit: cover;
+  object-position: left;
+  border-radius: 10px;
+  transition: 0.6s;
+}
+
+
+
+figcaption{
+  color: whitesmoke;
+}
+
  /*---------------------*/
 
   /*Contato*/
