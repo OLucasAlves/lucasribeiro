@@ -331,7 +331,22 @@ figcaption{
  /*---------------------*/
 
   /*Contato*/
- .contato{ 
+
+   .contato-container{
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: center;
+     height: 85vh;
+   } 
+  .contato{
+    width: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+ .contato-icons{ 
   background: whitesmoke;
   display: flex;
   flex-direction: row;
@@ -339,6 +354,18 @@ figcaption{
   align-items: center;
   background-color: rgba(0,0,0,1);
   border-radius: 5px;
+  width: 50%;
+}
+
+@media (max-width: 880px){
+  .contato{
+    width: 100%;
+  }
+
+  .contato-icons{ 
+    width: 100%;
+  }
+  
 }
 
 
