@@ -28,7 +28,7 @@ body{
  }
 
   header{
-    height:100vh;
+    height:10vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -90,13 +90,6 @@ body{
     margin-bottom: 1em;
   }
 
-  @media (max-width: 800px) {
-    .titulo {
-      margin-top: 5em;
-    }
-  }
-  
-
   @keyframes  animacaoTitulo{
    
     100% {
@@ -138,11 +131,12 @@ body{
     width: 50%;
   }
 
-  @media (max-width: 450px){
+  @media (max-width: 880px){
 
-    
     .sobre .desc {
       width: 100%;
+      grid-template-columns: 240px;
+
     }
       
   }
@@ -164,8 +158,9 @@ body{
     float: left;
     margin-right: 1em;
     margin-top: 1em;
-    margin-left: 1em;
+    margin-left: 0.2em;
     clip-path: circle(50% at 50% 50%);
+    object-fit: cover;
   }
 
 
@@ -234,6 +229,17 @@ body{
   
 }
 
+@media (max-width: 880px) {
+  .flip-card {
+    margin-left: 50px;
+    object-fit: cover;
+  }
+
+  .card-back{
+    margin-right: 50px;
+  } 
+}
+
 @media (min-width: 880px){
   .portifolio .grid{
     grid-template-columns: repeat(3,240px);
@@ -244,19 +250,7 @@ body{
   
 }
 
-.portifolio figure{
-  text-align: center;
-}
 
-.img-portfolio{
-  width: 100%;
-  height: 180px;
-  object-fit: cover;
-  object-position: left;
-  border-radius: 10px;
-  transition: transform 500ms;
-
-}
 
 .flip-card{
   perspective: 1000px;
@@ -265,10 +259,15 @@ body{
 
 @media (max-width: 880px){
   .flip-card{
-    margin-top:   0em; 
+    margin-top: 0em; 
     margin-top: 1em;
   }
   
+}
+
+.flip-card:active .card,
+.flip-card:hover .card {
+  transform: rotateY(180deg);
 }
 
 .card { 
@@ -278,17 +277,14 @@ body{
   transition: transform 1s;
 }
 
-.flip-card:active .card,
-.flip-card:hover .card {
-  transform: rotateY(180deg);
-}
-
 .card-front,
 .card-back {
   backface-visibility: hidden;
-  left: 1; 
+  left: 0; 
   position: absolute;
   top: 0;
+  width: 80%;
+  object-fit: cover;
 } 
 
 .card-back{
@@ -297,12 +293,23 @@ body{
   justify-content: center;
   background-color: rgba(255, 255, 255, .7);
   height: 180px;
-  width: 100%;
+  width: 80%;
   transform: rotateY(180deg);
+  object-fit: cover;
+  border-radius: 10%;
 } 
 
 .portfolio figure {
   text-align: center;
+}
+
+.img-portfolio {
+  height: 180px;
+  width: 100%;
+  object-fit: cover;
+  object-position: left bottom;
+  transition: transform 500ms;
+  border-radius: 10%;
 }
 
 .img-portfolio:hover{
