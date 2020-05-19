@@ -132,15 +132,24 @@ body{
     width: 50%;
   }
 
+
+
   @media (max-width: 880px){
 
     .sobre .desc {
       width: 100%;
-      grid-template-columns: 240px;
+      grid-template-columns: 260px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
 
     }
+
       
   }
+
+
 
   .sobre a{
     color: #297ae3;
@@ -287,7 +296,7 @@ body{
   position: absolute;
   top: 0;
   width: 100%;
-  object-fit: cover;
+  object-fit: scale-down;
 } 
 
 .card-back{
@@ -299,7 +308,7 @@ body{
   width: 100%;
   transform: rotateY(180deg);
   object-fit: cover;
-  border-radius: 10%;
+  border-radius: 5%;
 } 
 
 .portfolio figure {
@@ -309,10 +318,9 @@ body{
 .img-portfolio {
   height: 180px;
   width: 100%;
-  object-fit: cover;
-  object-position: left bottom;
+  object-position: center;
   transition: transform 500ms;
-  border-radius: 10%;
+  border-radius: 5%;
 }
 
 .img-portfolio:hover{
